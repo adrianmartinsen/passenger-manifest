@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <title>Passasjerinfo</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Velfjordskyss</h1>
+    <form id="participant">
+        <fieldset>
+            <legend>Passasjer:</legend>
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="date">Dato:</label>
+            <input type="date" id="date" name="date"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <script>
+        // Initialize Cloud Firestore through Firebase - DEACTIVATED INSTANCE
+        firebase.initializeApp({
+            apiKey: "AIzaSyApzLNDFOpcORSQCeUVnZj9CTg7jfrUyhk",
+            authDomain: "velfjordskyss-passasjerliste.firebaseapp.com",
+            projectId: "velfjordskyss-passasjerliste",
+        });
+        const db = firebase.firestore();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
